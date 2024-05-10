@@ -1,5 +1,5 @@
 # Use the official Node.js 14 image
-FROM node:20
+FROM node:14
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
@@ -16,7 +16,7 @@ RUN npm install --only=prod
 COPY . .
 
 # Expose the port the app runs on
-EXPOSE 3000
+EXPOSE 8080
 
 # Command to run the application
 CMD ["npm", "start"]
